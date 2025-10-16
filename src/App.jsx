@@ -56,25 +56,27 @@ export default function App() {
 
   return (
     <div className="app-container">
-      <header>
-        <h1>Todo App</h1>
-        <p className="muted">Add, edit, complete, delete - stored in localStorage</p>
-      </header>
+      <div className="todo-container">
+        <header>
+          <h1>Todo App</h1>
+          <p className="muted">Add, edit, complete, delete - stored in localStorage</p>
+        </header>
 
-      <main>
-        <TodoForm onAdd={addTodo} />
+        <main>
+          <TodoForm onAdd={addTodo} />
 
-        <section className="controls">
-          <button onClick={clearAll} className="danger small">Clear all</button>
-        </section>
+          <section className="controls">
+            <button onClick={clearAll} className="danger small">Clear all</button>
+          </section>
 
-        <TodoList
-          todos={todos}
-          onDelete={deleteTodo}
-          onToggle={toggleComplete}
-          onEdit={editTodo}
-        />
-      </main>
+          <TodoList
+            todos={todos}
+            onDelete={deleteTodo}
+            onToggle={toggleComplete}
+            onEdit={editTodo}
+          />
+        </main>
+      </div>
 
       <footer className="muted small">Tip: press Enter to add a task. Double-click task text to edit quickly</footer>
 
